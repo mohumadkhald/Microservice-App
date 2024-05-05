@@ -12,6 +12,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/api-gatway/pom.xml" />
+        <option value="$PROJECT_DIR$/registry-server/pom.xml" />
       </set>
     </option>
   </component>
