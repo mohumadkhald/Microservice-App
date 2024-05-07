@@ -21,14 +21,14 @@ public class SecurityConfig {
                 .csrf(ServerHttpSecurity.CsrfSpec::disable)
                 .authorizeExchange(
                         authorizeExchangeSpec -> authorizeExchangeSpec
-                                .pathMatchers("/eureka/**")
+                                .pathMatchers("/eureka/**","/api/**")
                                 .permitAll()
                                 .anyExchange()
                                 .authenticated()
-                )
-                .oauth2ResourceServer(oauth2 -> oauth2
-                        .jwt(Customizer.withDefaults())
                 );
+//                .oauth2ResourceServer(oauth2 -> oauth2
+//                        .jwt(Customizer.withDefaults())
+//                );
         return serverHttpSecurity.build();
 
 
